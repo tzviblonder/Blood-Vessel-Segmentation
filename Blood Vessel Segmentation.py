@@ -90,7 +90,7 @@ print('There are {} images in the train set and {} images in the test set.'.form
                                                                                    len(test_images)))
 
 
-# #### Here are some examples of what the data looks like. On the left are the images of cross sections of kidneys and the segmentation masks are on the right.The highlighted area in the segmentation mask corresponds to a labeled blood vessel in the image to its left:
+# #### Here are some examples of what the data looks like. On the left are the images of cross sections of kidneys and the segmentation masks are on the right. It is important to note that the data is not fully annotated, with some images being only about 65% labeled, meaning that there may be blood vessels that are missed. The highlighted area in the segmentation mask corresponds to a labeled blood vessel in the image to its left:
 
 # In[5]:
 
@@ -276,7 +276,7 @@ metrics_df = pd.DataFrame(metrics_dict,index=metrics)
 metrics_df
 
 
-# #### Here are examples of the model's performance on train images; for each example the image, the correct mask as per the label, and the predicted mask created by the model are shown:
+# #### Here are examples of the model's performance on train images; for each example the image, the correct mask as per the label, and the predicted mask created by the model are shown. Since the data is not 100% annotated, there may be some blood vessels that the model finds but is not found in the given label.
 
 # In[12]:
 
